@@ -1,0 +1,5 @@
+# exclude autoload/ (for pathogen) so as to force myself to get latest
+autoload/
+
+# don't need to track the history file(s)
+.netrwhist

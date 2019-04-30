@@ -34,6 +34,10 @@ noremap <Leader>n :tabnext<CR>
 noremap <Leader>p :tabprevious<CR>
 noremap <Leader>tc :tabclose<CR>
 
+" (un)comment magikz
+let @c=':s/^/#/g'
+let @u=':s/^\(\s\{-}\)#/\1/g'
+
 " tabbing-n-things
 set tabstop=4	" of spaces a tab counts for (i.e., how to render <Tab>)
 set softtabstop=4	" of spaces inserted when <Tab> is hit in INSERT

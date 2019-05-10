@@ -16,3 +16,6 @@
 [submodule "bundle/vim-solarized8-theme"]
 	path = bundle/vim-solarized8-theme
 	url = git@github.com:lifepillar/vim-solarized8.git
+[submodule "bundle/vim-terraform"]
+	path = bundle/vim-terraform
+	url = git@github.com:hashivim/vim-terraform.git

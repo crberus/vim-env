@@ -99,3 +99,15 @@ set statusline+=%#Cursor#       " colour
 set statusline+=\ %3p%%\                " percentage
 " always show status line
 set laststatus=2
+
+" NERDTree (https://github.com/scrooloose/nerdtree)
+" # Open automatically with vim every time
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" # Open automatically when opened from a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+" # Open on demand via Ctl+n
+map <C-n> :NERDTreeToggle<CR>
+" # Allow vim to close on a :q if a single NERDTree window is still open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

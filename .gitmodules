@@ -19,3 +19,12 @@
 [submodule "bundle/vim-terraform"]
 	path = bundle/vim-terraform
 	url = git@github.com:hashivim/vim-terraform.git
+[submodule "bundle/vim-synthwave-theme"]
+	path = bundle/vim-synthwave-theme
+	url = git@github.com:exitface/synthwave.vim.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
+[submodule "bundle/nerdtree-git-plugin"]
+	path = bundle/nerdtree-git-plugin
+	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git

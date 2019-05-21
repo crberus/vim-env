@@ -28,3 +28,9 @@
 [submodule "bundle/nerdtree-git-plugin"]
 	path = bundle/nerdtree-git-plugin
 	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
+[submodule "bundle/jedi-vim"]
+	path = bundle/jedi-vim
+	url = git@github.com:davidhalter/jedi-vim.git
+[submodule "bundle/jedi"]
+	path = bundle/jedi
+	url = git@github.com:davidhalter/jedi.git

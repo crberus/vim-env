@@ -31,6 +31,3 @@
 [submodule "bundle/jedi-vim"]
 	path = bundle/jedi-vim
 	url = git@github.com:davidhalter/jedi-vim.git
-[submodule "bundle/jedi"]
-	path = bundle/jedi
-	url = git@github.com:davidhalter/jedi.git

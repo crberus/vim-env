@@ -31,3 +31,6 @@
 [submodule "bundle/jedi-vim"]
 	path = bundle/jedi-vim
 	url = git@github.com:davidhalter/jedi-vim.git
+[submodule "bundle/AfterColors.vim"]
+	path = bundle/AfterColors.vim
+	url = https://github.com/vim-scripts/AfterColors.vim.git

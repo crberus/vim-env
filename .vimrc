@@ -33,6 +33,8 @@ noremap <Leader>tn :tabnew<CR>
 noremap <Leader>n :tabnext<CR>
 noremap <Leader>p :tabprevious<CR>
 noremap <Leader>tc :tabclose<CR>
+noremap <Leader>fp :echo expand('%:p')<CR>
+noremap <Leader>rp :echo @%<CR>
 
 " (un)comment magikz
 let @c=':s/^/#/g'

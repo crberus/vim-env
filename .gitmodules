@@ -34,3 +34,6 @@
 [submodule "bundle/AfterColors.vim"]
 	path = bundle/AfterColors.vim
 	url = https://github.com/vim-scripts/AfterColors.vim.git
+[submodule "bundle/indentLine"]
+	path = bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine.git

@@ -22,7 +22,9 @@ set nowrap	" gimme line numbers unless i ask you not to
 set number	" always show tabline
 set showtabline=2	" (0:never, 1:if tabs >1, 2:always)
 " color the ## column for a visual reminder if running a big terminal
-set colorcolumn=79	"
+set colorcolumn=79
+set cursorline
+set cursorcolumn 
 
 " remap leader to comma
 let mapleader=","
@@ -113,3 +115,25 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 map <C-n> :NERDTreeToggle<CR>
 " # Allow vim to close on a :q if a single NERDTree window is still open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Indentline (https://github.com/Yggdroot/indentLine)
+"let g:indentLine_setColors = 0
+" Vim
+"let g:indentLine_color_term = 239
+
+" GVim
+"let g:indentLine_color_gui = '#A4E57E'
+
+" Disable quote concealing in JSON files
+let g:vim_json_conceal=0
+
+" none X terminal
+"let g:indentLine_color_tty_light = 7 " (default: 4)
+"let g:indentLine_color_dark = 1 " (default: 2)
+
+" Background (Vim, GVim)
+"let g:indentLine_bgcolor_term = 202
+"let g:indentLine_bgcolor_gui = '#FF5F00'
+
+"let g:indentLine_char = 'c'
+"let g:indentLine_char_list = ['|', '¦', '┆', '┊']

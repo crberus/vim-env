@@ -25,6 +25,7 @@ set showtabline=2	" (0:never, 1:if tabs >1, 2:always)
 set colorcolumn=79
 set cursorline
 set cursorcolumn 
+set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
 
 " remap leader to comma
 let mapleader=","

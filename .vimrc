@@ -116,6 +116,8 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 map <C-n> :NERDTreeToggle<CR>
 " # Allow vim to close on a :q if a single NERDTree window is still open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" # Show hidden files by default
+let NERDTreeShowHidden=1
 
 " Indentline (https://github.com/Yggdroot/indentLine)
 "let g:indentLine_setColors = 0

@@ -7,7 +7,7 @@ My personal vim environment
 1. `cd ~`
 2. `git clone git@github.com:crberus/vim-env.git .vim`
 3. `ln -s .vim/.vimrc`
-4. `cd ~/.vim & git submodule update --init --recursive`
+4. `cd ~/.vim && git submodule update --init --recursive`
 
 ## "Install" Pathogen (latest)
 5. `mkdir ~/.vim/autoload`
@@ -22,5 +22,5 @@ My personal vim environment
 
 # jedi-vim Notes
 - *vim* should be installed via macports with the following variants:
-    `+big+python27+python36`
-- *jedi* should be installed via macports: `py36-jedi` & `py27-jedi`
+    `+big+python39`
+- *jedi* should be installed via macports: `py39-jedi`

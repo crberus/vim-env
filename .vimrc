@@ -138,3 +138,21 @@ let g:vim_json_conceal=0
 
 "let g:indentLine_char = 'c'
 "let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+" GitHub Co-Pilot
+" enable copilot for specific file types
+let g:copilot_filetypes = {
+    \ '*': v:false,
+    \ 'javascript': v:true,
+    \ 'typescript': v:true,
+    \ 'lua': v:false,
+    \ 'rust': v:true,
+    \ 'bash': v:true,
+    \ 'c': v:true,
+    \ 'c#': v:true,
+    \ 'c++': v:true,
+    \ 'go': v:true,
+    \ 'python': v:true,
+    \ 'terraform': v:true,
+    \ 'yaml': v:true,
+\ }

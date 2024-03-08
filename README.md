@@ -22,5 +22,20 @@ My personal vim environment
 
 # jedi-vim Notes
 - *vim* should be installed via macports with the following variants:
-    `+big+python27+python36`
-- *jedi* should be installed via macports: `py36-jedi` & `py27-jedi`
+    `+big+python2<x>+python3<x>`
+- *jedi* should be installed via macports: `py3<x>-jedi` & `py2<x>-jedi`
+
+# GitHub Copilot Install Notes
+## Resources
+[copilot.vim](https://github.com/github/copilot.vim)
+[Using GitHub Co-Pilot With VIM](https://ovid.github.io/articles/using-github-copilot-with-vim.html)
+
+## Installation Notes
+1. installed node.js through macports
+    `port install nodejs<ver>`
+2. _installed_ the submodule for pathogen autoload
+    ```
+    cd ~/.vim
+    git submodule add https://github.com/github/copilot.vim.git bundle/copilot.vim
+    ```
+3. enabled/activated in VIM `:Copilot setup`

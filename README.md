@@ -7,7 +7,7 @@ My personal vim environment
 1. `cd ~`
 2. `git clone git@github.com:crberus/vim-env.git .vim`
 3. `ln -s .vim/.vimrc`
-4. `cd ~/.vim & git submodule update --init --recursive`
+4. `cd ~/.vim && git submodule update --init --recursive`
 
 ## "Install" Pathogen (latest)
 5. `mkdir ~/.vim/autoload`
@@ -39,3 +39,5 @@ My personal vim environment
     git submodule add https://github.com/github/copilot.vim.git bundle/copilot.vim
     ```
 3. enabled/activated in VIM `:Copilot setup`
+    `+big+python39`
+- *jedi* should be installed via macports: `py39-jedi`

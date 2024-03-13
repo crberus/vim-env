@@ -1,8 +1,14 @@
 " down with the old; empower the future
 set nocompatible
 
-" enable pathogen
-execute pathogen#infect()
+" Pathogen
+" To disable a plugin, add it's bundle name to the following list
+let g:pathogen_disabled = [
+    \ 'palenight-theme'
+    \ ]
+
+call pathogen#infect()
+"execute pathogen#infect()
 
 "" ergonomics
 " allow terminal true colors (not supported by Terminal.App)
@@ -11,8 +17,18 @@ let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 " my soul is corrupted
 set bg=dark
-" purdiness
-colorscheme palenight	" https://github.com/drewtempelmeyer/palenight.vim
+
+" Aesthetics
+"colorscheme palenight	" https://github.com/drewtempelmeyer/palenight.vim
+"colorscheme solarized8_flat
+colorscheme dracula
+"colorscheme synthwave
+"
+"Enable true colors
+if (has("nvim"))
+  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
 
 "" misc little dumpy crap that doesn't fit well anywhere else
 " show the current editing mode in the statusline
@@ -120,26 +136,32 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let NERDTreeShowHidden=1
 
 " Indentline (https://github.com/Yggdroot/indentLine)
+"let g:indentLine_enabled = 1
+"
+" indentLine will overwrite your "concealcursor" and "conceallevel" with default value:
+"let g:indentLine_concealcursor = 'inc'
+"let g:indentLine_conceallevel = 2
+"
+" indentLine will overwrite 'conceal' color with grey by default. If you want to highlight conceal color with your colorscheme, disable by:
 "let g:indentLine_setColors = 0
-" Vim
 "let g:indentLine_color_term = 239
-
-" GVim
-"let g:indentLine_color_gui = '#A4E57E'
-
-" Disable quote concealing in JSON files
-let g:vim_json_conceal=0
-
-" none X terminal
-"let g:indentLine_color_tty_light = 7 " (default: 4)
-"let g:indentLine_color_dark = 1 " (default: 2)
-
+"
 " Background (Vim, GVim)
 "let g:indentLine_bgcolor_term = 202
 "let g:indentLine_bgcolor_gui = '#FF5F00'
-
-"let g:indentLine_char = 'c'
-"let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+"
+" Make lines even prettier, but only works with UTF-8 encoded files
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+"
+" Disable quote concealing in JSON
+" https://stackoverflow.com/questions/40601818/vim-displays-json-file-without-any-quotes
+" Some of this isn't indentLine, but grouping together since it's logical
+let g:indentLine_setConceal = 0
+let g:vim_json_conceal=0
+let g:vim_json_syntax_conceal = 0
+"
+" Disable quote concealing in Markdown
+let g:markdown_syntax_conceal=0
 
 " GitHub Co-Pilot
 " enable copilot for specific file types
@@ -153,6 +175,7 @@ let g:copilot_filetypes = {
     \ 'c': v:true,
     \ 'c#': v:true,
     \ 'c++': v:true,
+    \ 'cpp': v:true,
     \ 'go': v:true,
     \ 'python': v:true,
     \ 'terraform': v:true,

@@ -46,3 +46,9 @@
 [submodule "bundle/vim-gitgutter"]
 	path = bundle/vim-gitgutter
 	url = https://github.com/vim-scripts/vim-gitgutter.git
+[submodule "bundle/vim-flog"]
+	path = bundle/vim-flog
+	url = https://github.com/rbong/vim-flog.git
+[submodule "bundle/vim-arduino-syntax"]
+	path = bundle/vim-arduino-syntax
+	url = https://github.com/sudar/vim-arduino-syntax.git

@@ -46,7 +46,8 @@ set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:�
 " remap leader to comma
 let mapleader=","
 " map leader+e to Texplore
-nnoremap <Leader>e :Texplore<CR>
+"nnoremap <Leader>e :Texplore<CR>
+nnoremap <Leader>e :NERDTreeToggle<CR>
 " quick leader tab operations
 noremap <Leader>tn :tabnew<CR>
 noremap <Leader>n :tabnext<CR>
@@ -54,6 +55,10 @@ noremap <Leader>p :tabprevious<CR>
 noremap <Leader>tc :tabclose<CR>
 noremap <Leader>fp :echo expand('%:p')<CR>
 noremap <Leader>rp :echo @%<CR>
+
+" modify Explore behaviors
+"  when browsing, <cr> will open the file by: new tab
+let netrw_browse_split=3
 
 " (un)comment magikz
 let @c=':s/^/#/g'
@@ -134,6 +139,9 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " # Show hidden files by default
 let NERDTreeShowHidden=1
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * if &buftype != 'quickfix' && getcmdwintype() == '' | silent NERDTreeMirror | endif
+let g:NERDTreeFileLines = 1
 
 " Indentline (https://github.com/Yggdroot/indentLine)
 "let g:indentLine_enabled = 1
